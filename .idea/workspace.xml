@@ -19,12 +19,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6c6fe1c3-36a0-49c8-a031-4834ff3f2cef" name="Default Changelist" comment="book.go package">
-      <change afterPath="$PROJECT_DIR$/database/database.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/GoFiberRestApi.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/GoFiberRestApi.iml" afterDir="false" />
+    <list default="true" id="6c6fe1c3-36a0-49c8-a031-4834ff3f2cef" name="Default Changelist" comment="go.mod removed, causing error fiber.Ctx used as value">
+      <change afterPath="$PROJECT_DIR$/endpoints.http" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoFiberRestApi.exe" beforeDir="false" afterPath="$PROJECT_DIR$/GoFiberRestApi.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/book/book.go" beforeDir="false" afterPath="$PROJECT_DIR$/book/book.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/books.db" beforeDir="false" afterPath="$PROJECT_DIR$/books.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -77,7 +77,50 @@
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="com.goide.configuration.GoLibrariesConfigurableProvider" />
   </component>
-  <component name="RunManager">
+  <component name="RestClientSettings">
+    <option name="REQUEST_HISTORY">
+      <list>
+        <RestClientRequest>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:3000/api/v1/book" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:3000/api/v1/book" />
+          <option name="urlPath" value="" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:3000/api/v1/book/2" />
+          <option name="urlPath" value="" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:3000/api/v1/book/1" />
+          <option name="urlPath" value="" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="HTTP Request.endpoints#4">
     <configuration name="go build GoFiberRestApi" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="GoFiberRestApi" />
       <working_directory value="$PROJECT_DIR$" />
@@ -87,8 +130,24 @@
       <directory value="$PROJECT_DIR$" />
       <method v="2" />
     </configuration>
+    <configuration name="endpoints#1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$PROJECT_DIR$/endpoints.http" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="endpoints#2" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$PROJECT_DIR$/endpoints.http" index="2" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="endpoints#3" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$PROJECT_DIR$/endpoints.http" index="3" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="endpoints#4" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$PROJECT_DIR$/endpoints.http" index="4" runType="Run single request">
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="HTTP Request.endpoints#4" />
+        <item itemvalue="HTTP Request.endpoints#3" />
+        <item itemvalue="HTTP Request.endpoints#1" />
+        <item itemvalue="HTTP Request.endpoints#2" />
         <item itemvalue="Go Build.go build GoFiberRestApi" />
       </list>
     </recent_temporary>
@@ -111,9 +170,14 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="book.go package" />
-    <option name="LAST_COMMIT_MESSAGE" value="book.go package" />
+    <MESSAGE value="go.mod removed, causing error fiber.Ctx used as value" />
+    <option name="LAST_COMMIT_MESSAGE" value="go.mod removed, causing error fiber.Ctx used as value" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="720" y="321" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1600270455705">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="720" y="321" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1600270455705" />
     <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1600268546024">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -126,30 +190,34 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="731" y="224" key="Github.UntrackedFilesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1600188916942" />
-    <state width="1877" height="336" key="GridCell.Tab.0.bottom" timestamp="1600269689011">
+    <state width="1877" height="431" key="GridCell.Tab.0.bottom" timestamp="1600301166248">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="336" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1600269689011" />
-    <state width="1877" height="336" key="GridCell.Tab.0.center" timestamp="1600269689011">
+    <state width="1877" height="431" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1600301166248" />
+    <state width="1877" height="431" key="GridCell.Tab.0.center" timestamp="1600301166248">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="336" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1600269689011" />
-    <state width="1877" height="336" key="GridCell.Tab.0.left" timestamp="1600269689011">
+    <state width="1877" height="431" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1600301166248" />
+    <state width="1877" height="431" key="GridCell.Tab.0.left" timestamp="1600301166247">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="336" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1600269689011" />
-    <state width="1877" height="336" key="GridCell.Tab.0.right" timestamp="1600269689011">
+    <state width="1877" height="431" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1600301166247" />
+    <state width="1877" height="431" key="GridCell.Tab.0.right" timestamp="1600301166248">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="336" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1600269689011" />
-    <state x="485" y="159" key="SettingsEditor" timestamp="1600268757959">
+    <state width="1877" height="431" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1600301166248" />
+    <state x="485" y="159" key="SettingsEditor" timestamp="1600271176199">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="485" y="159" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1600268757959" />
-    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1600189346035">
+    <state x="485" y="159" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1600271176199" />
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1600270503723">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="252" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1600189346035" />
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1600270503723" />
+    <state x="729" y="253" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog" timestamp="1600270455732">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="729" y="253" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1600270455732" />
     <state x="623" y="225" key="search.everywhere.popup" timestamp="1600189540680">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

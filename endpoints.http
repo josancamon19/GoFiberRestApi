@@ -1,0 +1,19 @@
+GET http://localhost:3000/api/v1/book/2
+
+###
+DELETE http://localhost:3000/api/v1/book/1
+
+###
+GET http://localhost:3000/api/v1/book
+
+###
+POST http://localhost:3000/api/v1/book
+Content-Type: application/json
+
+{
+  "name": "Autoestopista intergalactico",
+  "author": ":s",
+  "Rating": 6
+}
+
+###

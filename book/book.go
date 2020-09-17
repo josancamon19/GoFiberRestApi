@@ -4,6 +4,7 @@ import (
 	"GoFiberRestApi/database"
 	"github.com/gofiber/fiber"
 	"gorm.io/gorm"
+	"net/http"
 )
 
 type Book struct {
@@ -29,9 +30,28 @@ func GetBook(c *fiber.Ctx) error {
 }
 
 func NewBook(c *fiber.Ctx) error {
-	return c.SendString("New Book")
+	db := database.DBConn
+	book := new(Book)
+	if err := c.BodyParser(book); err != nil {
+		return c.Status(503).SendString("Invalid body data")
+	}
+	if book.Title == "" {
+		return c.Status(503).SendString("Invalid body data")
+	}
+
+	db.Create(&book)
+	return c.JSON(book)
 }
 
 func DeleteBook(c *fiber.Ctx) error {
-	return c.SendString("Delete Book")
+	id := c.Params("id")
+	db := database.DBConn
+
+	var book Book
+	db.First(&book, id)
+	if book.Title == "" {
+		return c.Status(http.StatusNotFound).SendString("No book found with id " + id)
+	}
+	db.Delete(&book)
+	return c.Status(http.StatusNoContent).SendString("Book deleted successfully")
 }

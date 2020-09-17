@@ -29,6 +29,11 @@ func initDatabase() {
 		panic("failed to connect database")
 	}
 	fmt.Println("Connection Opened to Database")
+	err = database.DBConn.AutoMigrate(&book.Book{})
+	if err != nil {
+		panic(err)
+	}
+	fmt.Println("Database migrated")
 }
 
 func main() {
